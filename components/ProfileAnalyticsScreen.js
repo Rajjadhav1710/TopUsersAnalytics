@@ -37,8 +37,8 @@ class ProfileAnalyticsScreen extends React.Component{
 
   render(){
     return(
-      <View>
-        <Text style={{ fontSize: 40 }}>Profile Analytics</Text>
+      <View style={{flex:1}}>
+        {/* <Text style={{ fontSize: 40 }}>Profile Analytics</Text> */}
         {this.state.profileData.length === 0 ? <NoDataFoundCard /> :
           <FlatList data={this.state.profileData} renderItem={({ item }) => <UserAnalyticsCard 
           analyticsType={this.props.route.params.analyticsType}

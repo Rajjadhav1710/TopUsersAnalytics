@@ -17,9 +17,17 @@ class UserAnalyticsCard extends React.Component{
 
     render(){
         return(
-            <View style={{borderWidth:2,borderRadius:10}}>
-                <Text style={{fontSize:40}}>user id:{this.props.userData.uid}</Text>
-                <Text style={{fontSize:40}}>{this.getViewsTitle(this.props.analyticsType)}:{this.props.userData.views}</Text>
+            <View style={{
+                // borderWidth:1,
+                borderRadius:10,
+                marginHorizontal:'2%',
+                marginVertical:'2%',
+                padding:'1%',
+                backgroundColor:'#f5f8ff',
+                elevation:12
+                }}>
+                <Text style={{fontSize:25}}>user id:{this.props.userData.uid}</Text>
+                <Text style={{fontSize:30}}>{this.getViewsTitle(this.props.analyticsType)}: {this.props.userData.views}👁‍🗨</Text>
             </View>
         );
     }

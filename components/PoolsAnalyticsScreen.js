@@ -39,8 +39,8 @@ class PoolsAnalyticsScreen extends React.Component{
 
   render(){
     return(
-      <View>
-        <Text style={{ fontSize: 40 }}>Pools Analytics</Text>
+      <View style={{flex:1}}>
+        {/* <Text style={{ fontSize: 40 }}>Pools Analytics</Text> */}
         {this.state.poolsData.length === 0 ? <NoDataFoundCard /> :
           <FlatList data={this.state.poolsData} renderItem={({ item }) => <UserAnalyticsCard 
           analyticsType={this.props.route.params.analyticsType}

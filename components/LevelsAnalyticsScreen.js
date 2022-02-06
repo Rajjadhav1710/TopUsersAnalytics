@@ -36,8 +36,8 @@ class LevelsAnalyticsScreen extends React.Component{
 
   render(){
     return(
-      <View>
-        <Text style={{ fontSize: 40 }}>Levels Analytics</Text>
+      <View style={{flex:1}}>
+        {/* <Text style={{ fontSize: 40 }}>Levels Analytics</Text> */}
         {this.state.levelsData.length === 0 ? <NoDataFoundCard /> :
           <FlatList data={this.state.levelsData} renderItem={({ item }) => <UserAnalyticsCard 
           analyticsType={this.props.route.params.analyticsType}

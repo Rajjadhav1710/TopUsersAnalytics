@@ -37,8 +37,8 @@ class ChallengeAnalyticsScreen extends React.Component{
   
   render(){
     return(
-      <View>
-        <Text style={{ fontSize: 40 }}>Challenge Analytics</Text>
+      <View style={{flex:1}}>
+        {/* <Text style={{ fontSize: 40 }}>Challenge Analytics</Text> */}
         {this.state.challengeData.length === 0 ? <NoDataFoundCard /> :
           <FlatList data={this.state.challengeData} renderItem={({ item }) => <UserAnalyticsCard 
           analyticsType={this.props.route.params.analyticsType}
