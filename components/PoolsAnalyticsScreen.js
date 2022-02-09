@@ -42,7 +42,7 @@ class PoolsAnalyticsScreen extends React.Component{
       <View style={{flex:1}}>
         {/* <Text style={{ fontSize: 40 }}>Pools Analytics</Text> */}
         {this.state.poolsData.length === 0 ? <NoDataFoundCard /> :
-          <FlatList data={this.state.poolsData} renderItem={({ item }) => <UserAnalyticsCard 
+          <FlatList contentContainerStyle={{flexGrow:1}} data={this.state.poolsData} renderItem={({ item }) => <UserAnalyticsCard 
           analyticsType={this.props.route.params.analyticsType}
           userData={{
             uid: item.uid,

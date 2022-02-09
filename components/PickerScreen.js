@@ -15,7 +15,7 @@ class PickerScreen extends React.Component{
                 <TextInput style={{
                     // height: 40,
                     margin: 12,
-                    borderWidth: 1,
+                    borderBottomWidth: 1,
                     padding: 10,
                     fontSize:20,
                     fontWeight:'bold',
@@ -26,7 +26,7 @@ class PickerScreen extends React.Component{
                 <TextInput style={{
                     // height: 40,
                     margin: 12,
-                    borderWidth: 1,
+                    borderBottomWidth: 1,
                     padding: 10,
                     fontSize:15,
                     fontWeight:'bold',

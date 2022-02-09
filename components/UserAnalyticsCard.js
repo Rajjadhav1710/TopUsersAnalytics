@@ -24,9 +24,10 @@ class UserAnalyticsCard extends React.Component{
                 marginVertical:'2%',
                 padding:'1%',
                 backgroundColor:'#f5f8ff',
-                elevation:12
+                elevation:15
                 }}>
-                <Text style={{fontSize:25}}>user id:{this.props.userData.uid}</Text>
+                <Text style={{fontSize:25}}>🏋🏼‍♀️ user id:{this.props.userData.uid}</Text>
+                <Text style={{textAlign:'center',color:'lightblue',fontSize:35}}>* * * * *</Text>
                 <Text style={{fontSize:30}}>{this.getViewsTitle(this.props.analyticsType)}: {this.props.userData.views}👁‍🗨</Text>
             </View>
         );

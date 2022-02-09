@@ -40,7 +40,7 @@ class ProfileAnalyticsScreen extends React.Component{
       <View style={{flex:1}}>
         {/* <Text style={{ fontSize: 40 }}>Profile Analytics</Text> */}
         {this.state.profileData.length === 0 ? <NoDataFoundCard /> :
-          <FlatList data={this.state.profileData} renderItem={({ item }) => <UserAnalyticsCard 
+          <FlatList contentContainerStyle={{flexGrow:1}} data={this.state.profileData} renderItem={({ item }) => <UserAnalyticsCard 
           analyticsType={this.props.route.params.analyticsType}
           userData={{
             uid: item.uid,
