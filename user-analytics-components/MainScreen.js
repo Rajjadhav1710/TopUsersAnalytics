@@ -75,14 +75,14 @@ class MainScreen extends React.Component{
       <ScrollView>
         {this.state.isLoading?<ActivityIndicator size={'large'}/>:
         (this.state.isDataEmpty?
-          <View>
-            <Text>NO DATA AVAILABLE</Text>
-            <Text>¯\_(ツ)_/¯</Text>
+          <View style={{paddingTop:'2%'}}>
+            <Text style={{fontSize:25,textAlign:'center'}}>NO DATA AVAILABLE</Text>
+            <Text style={{fontSize:25,textAlign:'center'}}>¯\_(ツ)_/¯</Text>
           </View>
           :
           <View>
             <View>
-              <Text>{this.props.route.params.monthYear}</Text>
+              <Text style={{fontSize:30,fontWeight:'bold',textAlign:'center',textDecorationLine:'underline'}}>Month : {this.props.route.params.monthYear}</Text>
             </View>
             <View>
               <AnalyticsCard title={this.props.route.params.screenName} data={this.state.screenData}/>

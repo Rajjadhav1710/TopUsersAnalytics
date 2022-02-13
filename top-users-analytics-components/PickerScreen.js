@@ -35,10 +35,17 @@ class PickerScreen extends React.Component{
                 placeholder="analytics type:'month','month-week','month-day'"
                 onChangeText={(text)=>{this.analyticsType=text;}} />
 
-                <TouchableOpacity onPress={()=>{this.props.navigation.navigate('Main',{
-                    postBodyData:this.postBodyData,
-                    analyticsType:this.analyticsType
-                });}}>
+                <TouchableOpacity onPress={()=>{
+                    if(this.postBodyData.length===0||this.analyticsType.length===0){
+                        alert('Something is missing...');
+                    }else{
+                        this.props.navigation.navigate('Main',{
+                            postBodyData:this.postBodyData,
+                            analyticsType:this.analyticsType
+                        });
+                    }
+                    
+                    }}>
                     <Text style={{textAlign:'center',fontSize:30}}>submit</Text>
                 </TouchableOpacity>
             </View>

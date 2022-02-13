@@ -19,8 +19,8 @@ class App extends React.Component{
       <NavigationContainer>
         <MyStack.Navigator initialRouteName="Login">
           <MyStack.Screen name="Login" component={LoginScreen} />
-          <MyStack.Screen name="TopUsersAnalyticsEntryPoint" component={TopUsersAnalyticsEntryPoint} />
-          <MyStack.Screen name="UserAnalyticsEntryPoint" component={UserAnalyticsEntryPoint} />
+          <MyStack.Screen name="TopUsersAnalyticsEntryPoint" component={TopUsersAnalyticsEntryPoint} options={{title:'Top Users Analytics'}}/>
+          <MyStack.Screen name="UserAnalyticsEntryPoint" component={UserAnalyticsEntryPoint} options={{title:'User Analytics'}}/>
         </MyStack.Navigator>
       </NavigationContainer>
     );

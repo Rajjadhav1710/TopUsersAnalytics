@@ -110,9 +110,9 @@ class WeekAnalyticsCard extends React.Component{
 
     render(){
         return(
-            <View>
+            <View style={{alignItems:'center',marginVertical:'2%'}}>
                 <BarChart data={this.state.chartData}
-                width={Dimensions.get("window").width}
+                width={Dimensions.get("window").width-10}
                 height={220}
                 fromZero={true}
                 chartConfig={{
@@ -127,7 +127,12 @@ class WeekAnalyticsCard extends React.Component{
                     strokeWidth: 2, // optional, default 3
                     barPercentage: 0.5,
                     useShadowColorFromDataset: false // optional
-                  }}/>
+                  }}
+                
+                style={{
+                    borderRadius: 16
+                }}
+                />
             </View>
         );
     }

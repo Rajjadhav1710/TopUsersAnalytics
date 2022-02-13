@@ -19,18 +19,20 @@ class PickerScreen extends React.Component{
         return(
             <View>
                 <View>
-                    <TextInput 
+                    <TextInput
+                    style={{fontSize:25,borderBottomWidth:1,marginHorizontal:'4%'}} 
                     placeholder="User ID"
                     onChangeText={(text)=>{this.uid=text;}}/>
                 </View>
-                <View>
+                <View style={{padding:'4%'}}>
                     <DatePicker
+                        style={{borderRadius: 10}}
                         mode="monthYear"
                         selectorStartingYear={2000}
                         onMonthYearChange={selectedMonthYear => {this.monthYear=selectedMonthYear; console.log(selectedMonthYear); }}
                     />
                 </View>
-                <View>
+                <View style={{alignItems:'center'}}>
                     <SelectDropdown
                         data={this.screens}
                         onSelect={(selectedItem, index) => {
@@ -47,10 +49,36 @@ class PickerScreen extends React.Component{
                             // if data array is an array of objects then return item.property to represent item in dropdown
                             return item
                         }}
+
+                        buttonStyle={
+                            { 
+                                width: "80%",
+                                height: 50,
+                                backgroundColor: "#444",
+                                borderRadius: 8,
+                            }
+                        }
+
+                        buttonTextStyle={
+                            {
+                                color: "#FFF",
+                                textAlign: "center",
+                                fontWeight: "bold",
+                            }
+                        }
+
+                        dropdownStyle={{ backgroundColor: "#444" }}
+                        rowStyle={{backgroundColor: "#444", borderBottomColor: "#C5C5C5",borderRadius:10}}
+                        rowTextStyle={{
+                            color: "#FFF",
+                            textAlign: "center",
+                            fontWeight: "bold",
+                        }}
                     />
                 </View>
                 <View>
-                    <TouchableOpacity 
+                    <TouchableOpacity
+                    style={{padding:'5%'}} 
                     onPress={()=>{
                         if(this.screenName.length===0||this.uid.length===0){
                             alert("Something Is Missing...");
@@ -78,7 +106,7 @@ class PickerScreen extends React.Component{
                             });
                         }
                     }}>
-                        <Text>Submit</Text>
+                        <Text style={{fontSize:30,textAlign:'center'}}>Submit</Text>
                     </TouchableOpacity>
                 </View>
             </View>

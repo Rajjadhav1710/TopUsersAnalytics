@@ -90,10 +90,10 @@ class MainScreen extends React.Component{
     return(
       this.state.isDataLoading?<ActivityIndicator size={'large'}/>:
         <Tab.Navigator>
-          <Tab.Screen name="PoolsAnalytics" component={PoolsAnalyticsScreen} initialParams={{poolsData:this.state.poolsData,analyticsType:this.props.route.params.analyticsType}}/>
-          <Tab.Screen name="ChallengeAnalytics" component={ChallengeAnalyticsScreen} initialParams={{challengeData:this.state.challengeData,analyticsType:this.props.route.params.analyticsType}}/>
-          <Tab.Screen name="LevelsAnalytics" component={LevelsAnalyticsScreen} initialParams={{levelsData:this.state.levelsData,analyticsType:this.props.route.params.analyticsType}}/>
-          <Tab.Screen name="ProfileAnalytics" component={ProfileAnalyticsScreen} initialParams={{profileData:this.state.profileData,analyticsType:this.props.route.params.analyticsType}}/>
+          <Tab.Screen name="PoolsAnalytics" component={PoolsAnalyticsScreen} initialParams={{poolsData:this.state.poolsData,analyticsType:this.props.route.params.analyticsType}} options={{headerShown:false}}/>
+          <Tab.Screen name="ChallengeAnalytics" component={ChallengeAnalyticsScreen} initialParams={{challengeData:this.state.challengeData,analyticsType:this.props.route.params.analyticsType}} options={{headerShown:false}}/>
+          <Tab.Screen name="LevelsAnalytics" component={LevelsAnalyticsScreen} initialParams={{levelsData:this.state.levelsData,analyticsType:this.props.route.params.analyticsType}} options={{headerShown:false}}/>
+          <Tab.Screen name="ProfileAnalytics" component={ProfileAnalyticsScreen} initialParams={{profileData:this.state.profileData,analyticsType:this.props.route.params.analyticsType}} options={{headerShown:false}}/>
         </Tab.Navigator>
     );
   }

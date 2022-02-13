@@ -12,7 +12,7 @@ class AnalyticsCard extends React.Component{
     render(){
         return(
             <View>
-                <Text style={{fontSize:50}}>{this.props.title}</Text>
+                <Text style={{fontSize:30,textAlign:'center',marginVertical:'1%'}}>{this.props.title}</Text>
                 <WeekAnalyticsCard data={this.props.data.week} totalWeeks={5}/>
                 <DayAnalyticsCard data={this.props.data.day}/>
             </View>
