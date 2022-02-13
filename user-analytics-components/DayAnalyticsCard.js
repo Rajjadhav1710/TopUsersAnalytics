@@ -100,7 +100,7 @@ class DayAnalyticsCard extends React.Component{
 
     render(){
         return(
-            <View style={{alignItems:'center',marginVertical:'5%'}}>
+            <View style={{alignItems:'center',marginVertical:'2%'}}>
                 <BarChart data={this.state.chartData}
                 width={Dimensions.get("window").width-10}
                 height={220}
